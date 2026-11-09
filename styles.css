@@ -1,0 +1,193 @@
+/* ---------- FONTS ---------- */
+/* Acier BAT is not on Google Fonts. Put your font files in a "fonts" folder
+   and make sure the file names below match your files. */
+@font-face {
+  font-family: "Acier BAT Text Solid";
+  src: url("fonts/AcierBAT-TextSolid.otf");
+}
+
+@font-face {
+  font-family: "Acier BAT Text Gris";
+  src: url("fonts/AcierBAT-TextGris.otf");
+}
+
+/* ---------- BODY AND COLORS ---------- */
+body {
+  /* Colors from the Figma file. Change them here and they change everywhere. */
+  --white: #ffffff;
+  --navy: #001b44;
+  --purple-dark: #1b1c62;
+  --purple-light: #2e2f81;
+  --page-background: #010532;
+  --hover-background: rgba(245, 135, 31, 0.22);
+  --hover-text: #ffae00;
+
+  margin: 0;
+  background-color: var(--page-background);
+  color: var(--white);
+  font-family: "Jeju Gothic", sans-serif;
+}
+
+/* A box that keeps content 1190px wide and centered on the page */
+.page-width {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  align-items: flex-end;
+  height: 600px;
+  padding-bottom: 86px;
+  box-sizing: border-box;
+  /* The first part is the brown tint from Figma, the second part is the photo */
+  background-image: linear-gradient(rgba(48, 23, 0, 0.24), rgba(48, 23, 0, 0.24)), url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-title {
+  margin: 0;
+  font-family: "Acier BAT Text Gris", sans-serif;
+  font-size: 128px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+/* ---------- NAVIGATION (top and footer share these classes) ---------- */
+.nav-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover state from the Figma "Variant2" */
+.nav-link:hover {
+  background-color: var(--hover-background);
+  color: var(--hover-text);
+}
+
+/* The navy bar under the hero */
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 163px;
+  background-color: var(--navy);
+}
+
+/* ---------- INTRO SECTION ---------- */
+/* The purple stripes are drawn with a gradient.
+   Read it top to bottom: purple stripe, gap, lighter purple stripe, gap. */
+.intro-section {
+  padding-top: 38px;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 38px,
+    var(--purple-dark) 38px,
+    var(--purple-dark) 181px,
+    transparent 181px,
+    transparent 230px,
+    var(--purple-light) 230px,
+    var(--purple-light) 335px,
+    transparent 335px
+  );
+}
+
+.intro-content {
+  display: flex;
+  height: 471px;
+}
+
+.intro-text {
+  width: 443px;
+}
+
+.welcome-title {
+  width: 405px;
+  margin: 0 0 96px 10px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.body-text {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 0.72px;
+}
+
+.intro-paragraph {
+  width: 421px;
+  margin-left: 22px;
+}
+
+.landscape-photo {
+  width: 534px;
+  height: 401px;
+  margin-top: 32px;
+  margin-left: auto;
+  object-fit: cover;
+}
+
+/* ---------- GALLERY SECTION ---------- */
+.gallery-section {
+  margin-top: 118px;
+}
+
+.gallery-content {
+  display: flex;
+}
+
+.stickers-photo {
+  width: 394px;
+  height: 525px;
+  object-fit: cover;
+}
+
+.gallery-paragraph {
+  width: 427px;
+  margin-top: 162px;
+  margin-left: 284px;
+}
+
+/* ---------- FOOTER ---------- */
+/* Same stripe trick as the intro section */
+.footer {
+  height: 634px;
+  margin-top: 270px;
+  padding-top: 171px;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    var(--purple-light) 105px,
+    transparent 105px,
+    transparent 154px,
+    var(--purple-dark) 154px,
+    var(--purple-dark) 297px,
+    transparent 297px,
+    transparent 335px,
+    var(--navy) 335px
+  );
+}
