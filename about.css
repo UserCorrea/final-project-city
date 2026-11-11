@@ -1,16 +1,23 @@
-/*background color*/
-
 html {
-    background-color: rgba(3, 8, 42, 1);
+    background-color: #010532;
+    
 }
 
 /*fonts*/
-
+@font-face {
+  font-family: "Acier BAT Text Gris";
+  src: url("fonts/AcierBAT-TextGris.otf");
+}
 
 /*main header*/
 
 .site-header {
-    color: antiquewhite;
+    
+   font-family: "Acier BAT Text Gris", sans-serif;
+font-weight: 10;
+font-style: normal;
+  
+    color:white;
 }
 
 
