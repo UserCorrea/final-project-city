@@ -1,0 +1,88 @@
+html {
+  --white: #ffffff;
+  --light-blue:rgb(159, 183, 209);
+  --navy: #001b44;
+  --purple-dark: #1b1c62;
+  --purple-light: #2e2f81;
+  --page-background: #010532;
+  --hover-background: rgba(245, 135, 31, 0.22);
+  --hover-text: #ffae00;
+}
+
+body{
+
+background-color: var(--page-background);
+color: var(--white);
+}
+
+h2 {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color: var(--light-blue);
+}
+
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-width-wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+/*Header*/
+.site-head {
+font-family: "Marcellus", serif;
+font-weight: 400;
+font-style: normal;
+color:white;
+
+}
+
+/* Navigator*/
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
+  border-bottom:  3px solid rgb(159, 183, 209);
+}
+
+
+.nav-item {
+  flex: 1; }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:rgb(159, 183, 209);
+ 
+}
+
+/* Hover state from the Figma "Variant2" */
+.nav-link:hover {
+  background-color: var(--hover-background);
+  color: var(--hover-text);
+}
+
+/* The navy bar under the hero */
+.top-nav {
+  
+  display: flex;
+  align-items: center;
+  height: 163px;
+  
+}
+
+/*main content*/

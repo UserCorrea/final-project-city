@@ -1,19 +1,363 @@
-/*background color*/
+/* ==========================================================
+   CITY SITES: styles.css
+   Collection page (1200px wide design)
+   ========================================================== */
 
-html {
-    background-color: rgba(3, 8, 42, 1);
+
+/* ---------- COLORS (from Figma) ----------
+   Page background (navy)    #03082a
+   Circle dark blue          #001b44
+   Circle medium blue        #1b1c62
+   Circle bright blue        #2e2f81  (also the divider lines)
+   Light blue text           #c5e1eb
+   Nav text                  #9fb7d1
+   Orange (filter buttons)   #f05a24
+   Gold (hover)              #ffae00
+   Nav hover background      #aa4708 at 40% see-through
+   White                     #ffffff
+*/
+
+
+/* ---------- PAGE ---------- */
+
+.page {
+  margin: 0;
+  background-color: #03082a;
+  color: #ffffff;
+  font-family: "JejuGothic", "Jeju Gothic", Arial, sans-serif;
+  position: relative;      /* lets the circles sit inside the page */
+  overflow: hidden;        /* hides the parts of circles that go off the edge */
 }
 
-/*main header*/
+.header,
+.main,
+.footer {
+  position: relative;      /* keeps the content on top of the circles */
+}
 
 
+/* ---------- BACKGROUND CIRCLES ---------- */
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-top-left {
+  width: 1156px;
+  height: 1156px;
+  left: -140px;
+  top: -800px;
+  background-color: #001b44;
+}
+
+.circle-top-right {
+  width: 700px;
+  height: 700px;
+  left: 750px;
+  top: 380px;
+  background-color: #1b1c62;
+}
+
+.circle-middle {
+  width: 420px;
+  height: 420px;
+  left: 330px;
+  top: 1070px;
+  background-color: #2e2f81;
+}
+
+.circle-bottom-left {
+  width: 707px;
+  height: 707px;
+  left: -300px;
+  top: 2650px;
+  background-color: #1b1c62;
+}
+
+.circle-bottom-right {
+  width: 1156px;
+  height: 1156px;
+  left: 340px;
+  top: 3200px;
+  background-color: #001b44;
+}
 
 
+/* ---------- HEADER AND NAVIGATION ---------- */
 
-/*Navigator*/
+.header {
+  padding-top: 126px;
+}
+
+.page-title {
+  margin: 0 0 76px 70px;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 100px;
+  color: #ffffff;
+}
+
+.nav {
+  width: 1100px;
+  margin: 0 auto;
+  border-top: 4px solid #2e2f81;
+  border-bottom: 4px solid #2e2f81;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  width: 1086px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  height: 99px;
+  padding: 0 40px;
+  font-family: "Acier BAT", Arial, sans-serif;
+  font-size: 32px;
+  line-height: 99px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #9fb7d1;
+}
+
+.nav-link:hover {
+  background-color: rgba(170, 71, 8, 0.4);
+  color: #ffae00;
+}
 
 
+/* ---------- FILTER BUTTONS ---------- */
+
+.filter {
+  width: 1100px;
+  margin: 70px auto 0;
+}
+
+.filter-heading {
+  margin: 0 0 48px 28px;
+  font-family: "Garamond", "EB Garamond", Georgia, serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 43px;
+  color: #c5e1eb;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 5px 0;
+  list-style: none;
+  border-top: 4px solid #2e2f81;
+  border-bottom: 4px solid #2e2f81;
+}
+
+.filter-button {
+  width: 148px;
+  height: 77px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Abril Fatface", serif;
+  font-size: 32px;
+  color: #f05a24;
+}
+
+.filter-button:hover {
+  color: #ffae00;
+}
+
+/* The category that is currently chosen */
+.filter-button.selected {
+  color: #ffae00;
+  text-decoration: underline;
+}
 
 
+/* ---------- PHOTO GALLERY ---------- */
 
-/*Image*/
+.gallery {
+  width: 1003px;
+  margin: 160px auto 0;
+}
+
+.photo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px 29px;          /* 80px between rows, 29px between columns */
+  margin: 0 0 80px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo-button {
+  display: block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 315px;
+}
+
+.photo-button.landscape {
+  height: 236px;
+}
+
+.photo-button.portrait {
+  height: 420px;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s;
+}
+
+/* Photos that are NOT in the chosen category turn black and white */
+.photo-button.dimmed .photo {
+  filter: grayscale(100%);
+}
+
+.note {
+  width: 813px;
+  margin: 10px auto 0;
+  font-family: "Garamond", "EB Garamond", Georgia, serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  color: #c5e1eb;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  width: 1100px;
+  margin: 150px auto 0;
+  padding: 40px 0 120px;
+  border-top: 4px solid #2e2f81;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-link {
+  font-size: 16px;
+  letter-spacing: 0.48px;
+  text-decoration: none;
+  color: #9fb7d1;
+}
+
+.footer-link:hover {
+  color: #ffae00;
+}
+
+
+/* ---------- POPUPS ---------- */
+/* Do not add "display" to .popup. The browser uses it to hide the popup until it opens. */
+
+.popup {
+  padding: 0;
+  border: none;
+  background-color: #03082a;
+  color: #ffffff;
+}
+
+/* The dark see-through layer behind the popup that greys out the rest of the page */
+.popup::backdrop {
+  background-color: rgba(3, 8, 42, 0.85);
+}
+
+.landscape-popup {
+  width: 755px;
+}
+
+.portrait-popup {
+  width: 423px;
+  padding: 75px 42px 0;
+}
+
+.popup-photo {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.landscape-popup .popup-photo {
+  height: 566px;
+}
+
+.portrait-popup .popup-photo {
+  height: 582px;
+}
+
+.popup-title {
+  margin: 0;
+  padding: 40px 30px 0;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  color: #c5e1eb;
+}
+
+.popup-address {
+  display: block;
+  padding: 0 30px 14px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  color: #ffffff;
+}
+
+/* Portrait captions start 18px further in, like the Figma frames */
+.portrait-popup .popup-title,
+.portrait-popup .popup-address {
+  padding-left: 18px;
+  padding-right: 0;
+}
+
+.portrait-popup .popup-title {
+  padding-top: 35px;
+}
+
+.portrait-popup .popup-address {
+  padding-bottom: 55px;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  border: 1px solid #2e2f81;
+  background-color: rgba(3, 8, 42, 0.85);
+  cursor: pointer;
+  font-family: "JejuGothic", "Jeju Gothic", Arial, sans-serif;
+  font-size: 16px;
+  color: #c5e1eb;
+}
+
+.close-button:hover {
+  color: #ffae00;
+}

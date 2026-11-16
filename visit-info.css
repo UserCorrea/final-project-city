@@ -1,0 +1,54 @@
+html {
+background-color: rgba(3, 8, 42, 1) ;
+    --hover-background: rgba(245, 135, 31, 0.22);
+    --hover-text: #ffae00;
+}
+
+.page-width-wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
+  border-bottom:  3px solid rgb(159, 183, 209);
+}
+
+
+.nav-item {
+  flex: 1; }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:rgb(159, 183, 209);
+ 
+
+ 
+}
+
+/* Hover state from the Figma "Variant2" */
+.nav-link:hover {
+  background-color: var(--hover-background);
+  color: var(--hover-text);
+}
+
+/* The navy bar under the hero */
+.top-nav {
+  
+  display: flex;
+  align-items: center;
+  height: 163px;
+  
+}

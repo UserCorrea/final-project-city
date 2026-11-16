@@ -67,12 +67,13 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  list-style: none;
+  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
+  border-bottom:  3px solid rgb(159, 183, 209);
 }
 
+
 .nav-item {
-  flex: 1;
-}
+  flex: 1; }
 
 .nav-link {
   display: flex;
@@ -83,8 +84,10 @@ body {
   font-size: 24px;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--white);
-  transition: background-color 0.2s, color 0.2s;
+  color:rgb(159, 183, 209);
+ 
+
+ 
 }
 
 /* Hover state from the Figma "Variant2" */
@@ -95,29 +98,17 @@ body {
 
 /* The navy bar under the hero */
 .top-nav {
+  
   display: flex;
   align-items: center;
   height: 163px;
-  background-color: var(--navy);
+  
 }
 
 /* ---------- INTRO SECTION ---------- */
 /* The purple stripes are drawn with a gradient.
    Read it top to bottom: purple stripe, gap, lighter purple stripe, gap. */
-.intro-section {
-  padding-top: 38px;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 38px,
-    var(--purple-dark) 38px,
-    var(--purple-dark) 181px,
-    transparent 181px,
-    transparent 230px,
-    var(--purple-light) 230px,
-    var(--purple-light) 335px,
-    transparent 335px
-  );
-}
+
 
 .intro-content {
   display: flex;
@@ -131,9 +122,10 @@ body {
 .welcome-title {
   width: 500px;
   margin: 0 0 50px 10px;
-  font-family: Garamond, serif;
+  font-family: EB Garamond, serif;
   font-size: 40px;
   font-weight:bold;
+  color:rgb(159, 183, 209);
 }
 
 .body-text {

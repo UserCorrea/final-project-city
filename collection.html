@@ -1,27 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="collection.css">
-    </head>
-<body>
-    <h1>Collection</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>Collection | City Sites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Google Fonts: Marcellus (title), Abril Fatface (filter buttons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=EB+Garamond:wght@700&family=Marcellus&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="collection.css">
+</head>
+
+<body class="page">
+
+  <!-- Decorative circles (the background shapes from Figma) -->
+  <div class="circle circle-top-left"></div>
+  <div class="circle circle-top-right"></div>
+  <div class="circle circle-middle"></div>
+  <div class="circle circle-bottom-left"></div>
+  <div class="circle circle-bottom-right"></div>
+
+  <header class="header">
+    <h1 class="page-title">Collection</h1>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="info.html">Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="collection.html">Collection</a></li>
+        <li class="nav-item"><a class="nav-link" href="visit.html">Visit</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- FILTER BUTTONS -->
+    <section class="filter">
+      <h2 class="filter-heading">Explore the Different Categories'</h2>
+
+      <ul class="filter-list">
+        <li class="filter-item"><button class="filter-button" data-category="zocalo">Zocalo</button></li>
+        <li class="filter-item"><button class="filter-button" data-category="lake">Lake</button></li>
+        <li class="filter-item"><button class="filter-button" data-category="street">Street</button></li>
+        <li class="filter-item"><button class="filter-button" data-category="city">City</button></li>
+        <li class="filter-item"><button class="filter-button" data-category="alleyway">Allyway</button></li>
+      </ul>
+    </section>
+
+    <!--
+      THUMBNAILS
+      Each thumbnail is a button that opens the popup with the matching popovertarget name.
+      data-categories lists which filter buttons the image belongs to.
+    -->
+    <section class="gallery">
+
+      <!-- Landscape photos (12) -->
+      <ul class="photo-list">
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="zocalo" popovertarget="popup-1">
+            <img class="photo" src="images/im44-5-4.jpg" alt="Zócalo Food Park at night with string lights">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="street" popovertarget="popup-2">
+            <img class="photo" src="images/im44-5-8.jpg" alt="Fire hydrant on 7th St">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="city" popovertarget="popup-3">
+            <img class="photo" src="images/im44-5-5.jpg" alt="Milwaukee River at sunset">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="zocalo" popovertarget="popup-4">
+            <img class="photo" src="images/im44-5-7.jpg" alt="Zócalo Food Park lit in red">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="street alleyway" popovertarget="popup-5">
+            <img class="photo" src="images/im44-5-3.jpg" alt="Abandoned food truck on W Bruce St">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="lake" popovertarget="popup-6">
+            <img class="photo" src="images/im44-5-6.jpg" alt="War Memorial Beer Garden">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="street alleyway" popovertarget="popup-7">
+            <img class="photo" src="images/im44-5-10.jpg" alt="Water tower on W Bruce St">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="zocalo" popovertarget="popup-8">
+            <img class="photo" src="images/im44-5-11.jpg" alt="Brick building at Zócalo Food Park">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="street city" popovertarget="popup-9">
+            <img class="photo" src="images/im44-5-9.jpg" alt="Water tower and highway sign by I-94">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="street city alleyway" popovertarget="popup-10">
+            <img class="photo" src="images/im44-5-13.jpg" alt="Kenilworth mural building">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="lake street" popovertarget="popup-11">
+            <img class="photo" src="images/im44-5-14.jpg" alt="Oak Leaf Trail at sunset">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button landscape" data-categories="" popovertarget="popup-12">
+            <img class="photo" src="images/im44-5-12.jpg" alt="Curtin Hall">
+          </button>
+        </li>
+      </ul>
+
+      <!-- Portrait photos (9) -->
+      <ul class="photo-list">
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="city" popovertarget="popup-13">
+            <img class="photo" src="images/img-1.jpg" alt="Downtown Milwaukee skyline from above">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="street" popovertarget="popup-14">
+            <img class="photo" src="images/img-2.jpg" alt="Sunset over buildings on 4th St">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="zocalo" popovertarget="popup-15">
+            <img class="photo" src="images/img-3.jpg" alt="Stickers on an orange wall at Zócalo Food Park">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="lake" popovertarget="popup-16">
+            <img class="photo" src="images/img-4.jpg" alt="Sticker on a post along the Oak Leaf Trail">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="alleyway" popovertarget="popup-17">
+            <img class="photo" src="images/img-5.jpg" alt="Warning sign on a pole on W Bruce St">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="lake street city" popovertarget="popup-18">
+            <img class="photo" src="images/img-6.jpg" alt="Plaza at the War Memorial with a tall tower">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="zocalo" popovertarget="popup-19">
+            <img class="photo" src="images/img-10.jpg" alt="Red apartment building near Zócalo Food Park">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="lake" popovertarget="popup-20">
+            <img class="photo" src="images/img-11.jpg" alt="Lake Michigan from McKinley Park Pier">
+          </button>
+        </li>
+        <li class="photo-item">
+          <button class="photo-button portrait" data-categories="lake" popovertarget="popup-21">
+            <img class="photo" src="images/img-12.jpg" alt="Stickers on a pole outside Collective Coffee">
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <p class="note">
+      The titles' are based on either where it was taken or what in the photo.
+      The address is based on what address I could find for where I took the image.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer-list">
+      <li class="footer-item"><a class="footer-link" href="index.html">Home</a></li>
+      <li class="footer-item"><a class="footer-link" href="info.html">Info</a></li>
+      <li class="footer-item"><a class="footer-link" href="collection.html">Collection</a></li>
+      <li class="footer-item"><a class="footer-link" href="visit.html">Visit</a></li>
+      <li class="footer-item"><a class="footer-link" href="about.html">About</a></li>
+    </ul>
+  </footer>
+
+
+  <!--
+    POPUPS
+    Each popup is a "popover". The thumbnail button above opens it.
+    Click outside the popup, press Esc, or click Close to shut it.
+    The id on each popup is needed so the thumbnail button can find it.
+  -->
+
+  <!-- Landscape popups -->
+  <aside class="popup landscape-popup" popover id="popup-1">
+    <img class="popup-photo" src="images/im44-5-4.jpg" alt="Zócalo Food Park at night with string lights">
+    <p class="popup-title">Zócalo Food Park</p>
+    <address class="popup-address">636 S 6th St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-1" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-2">
+    <img class="popup-photo" src="images/im44-5-8.jpg" alt="Fire hydrant on 7th St">
+    <p class="popup-title">Fire Hydrant</p>
+    <address class="popup-address">7th St</address>
+    <button class="close-button" popovertarget="popup-2" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-3">
+    <img class="popup-photo" src="images/im44-5-5.jpg" alt="Milwaukee River at sunset">
+    <p class="popup-title">Milwaukee River</p>
+    <address class="popup-address">100 N Water St, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-3" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-4">
+    <img class="popup-photo" src="images/im44-5-7.jpg" alt="Zócalo Food Park lit in red">
+    <p class="popup-title">Zócalo Food Park</p>
+    <address class="popup-address">636 S 6th St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-4" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-5">
+    <img class="popup-photo" src="images/im44-5-3.jpg" alt="Abandoned food truck on W Bruce St">
+    <p class="popup-title">Abandoned Food Truck</p>
+    <address class="popup-address">423 W Bruce St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-5" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-6">
+    <img class="popup-photo" src="images/im44-5-6.jpg" alt="War Memorial Beer Garden">
+    <p class="popup-title">War Memorial Beer Garden</p>
+    <address class="popup-address">750 N Lincoln Memorial Dr, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-6" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-7">
+    <img class="popup-photo" src="images/im44-5-10.jpg" alt="Water tower on W Bruce St">
+    <p class="popup-title">Water Tower</p>
+    <address class="popup-address">423 W Bruce St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-7" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-8">
+    <img class="popup-photo" src="images/im44-5-11.jpg" alt="Brick building at Zócalo Food Park">
+    <p class="popup-title">Zócalo Food Park</p>
+    <address class="popup-address">636 S 6th St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-8" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-9">
+    <img class="popup-photo" src="images/im44-5-9.jpg" alt="Water tower and highway sign by I-94">
+    <p class="popup-title">Water Tower</p>
+    <address class="popup-address">I-94 Plankton Ave Highway sign</address>
+    <button class="close-button" popovertarget="popup-9" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-10">
+    <img class="popup-photo" src="images/im44-5-13.jpg" alt="Kenilworth mural building">
+    <p class="popup-title">Kenilworth</p>
+    <address class="popup-address">2155 N Prospect Ave, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-10" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-11">
+    <img class="popup-photo" src="images/im44-5-14.jpg" alt="Oak Leaf Trail at sunset">
+    <p class="popup-title">Oak Leaf Trail</p>
+    <address class="popup-address">4198 32nd Division Memorial Hwy, St Francis, WI 5323</address>
+    <button class="close-button" popovertarget="popup-11" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup landscape-popup" popover id="popup-12">
+    <img class="popup-photo" src="images/im44-5-12.jpg" alt="Curtin Hall">
+    <p class="popup-title">Curtin Hall</p>
+    <address class="popup-address">3243 N Downer Ave, Milwaukee, WI 53211</address>
+    <button class="close-button" popovertarget="popup-12" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <!-- Portrait popups -->
+  <aside class="popup portrait-popup" popover id="popup-13">
+    <img class="popup-photo" src="images/img-1.jpg" alt="Downtown Milwaukee skyline from above">
+    <p class="popup-title">Associated Bank River Center</p>
+    <address class="popup-address">111 E Kilbourn Ave, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-13" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-14">
+    <img class="popup-photo" src="images/img-2.jpg" alt="Sunset over buildings on 4th St">
+    <p class="popup-title">4th St</p>
+    <address class="popup-address">401 W Lincoln Ave, Milwaukee, WI 53207</address>
+    <button class="close-button" popovertarget="popup-14" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-15">
+    <img class="popup-photo" src="images/img-3.jpg" alt="Stickers on an orange wall at Zócalo Food Park">
+    <p class="popup-title">Zócalo Food Park</p>
+    <address class="popup-address">636 S 6th St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-15" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-16">
+    <img class="popup-photo" src="images/img-4.jpg" alt="Sticker on a post along the Oak Leaf Trail">
+    <p class="popup-title">Oak Leaf Trail</p>
+    <address class="popup-address">1988 E Lafayette Hill Rd</address>
+    <button class="close-button" popovertarget="popup-16" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-17">
+    <img class="popup-photo" src="images/img-5.jpg" alt="Warning sign on a pole on W Bruce St">
+    <p class="popup-title">Warning Sign</p>
+    <address class="popup-address">423 W Bruce St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-17" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-18">
+    <img class="popup-photo" src="images/img-6.jpg" alt="Plaza at the War Memorial with a tall tower">
+    <p class="popup-title">War Memorial</p>
+    <address class="popup-address">750 N Lincoln Memorial Dr, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-18" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-19">
+    <img class="popup-photo" src="images/img-10.jpg" alt="Red apartment building near Zócalo Food Park">
+    <p class="popup-title">Taxco Apartment</p>
+    <address class="popup-address">636 S 6th St, Milwaukee, WI 53204</address>
+    <button class="close-button" popovertarget="popup-19" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-20">
+    <img class="popup-photo" src="images/img-11.jpg" alt="Lake Michigan from McKinley Park Pier">
+    <p class="popup-title">Lake Michigan</p>
+    <address class="popup-address">McKinley Park Pier</address>
+    <button class="close-button" popovertarget="popup-20" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <aside class="popup portrait-popup" popover id="popup-21">
+    <img class="popup-photo" src="images/img-12.jpg" alt="Stickers on a pole outside Collective Coffee">
+    <p class="popup-title">Collective Coffee</p>
+    <address class="popup-address">1701 N Lincoln Memorial Dr, Milwaukee, WI 53202</address>
+    <button class="close-button" popovertarget="popup-21" popovertargetaction="hide">Close</button>
+  </aside>
+
+  <script src="script.js">
+    // CATEGORY FILTER
+// Click a category (Zocalo, Lake, Street, City, Allyway) and every photo
+// that is NOT in that category turns black and white.
+// Click the same category again to bring all the colors back.
+
+// 1. Find all the filter buttons and all the photo buttons on the page
+var filterButtons = document.querySelectorAll(".filter-button");
+var photoButtons = document.querySelectorAll(".photo-button");
+
+// 2. Remember which category is chosen ("" means none)
+var chosenCategory = "";
+
+// 3. This function updates the page for the chosen category
+function updatePage() {
+
+  // Loop through every filter button
+  for (var i = 0; i < filterButtons.length; i++) {
+    var filterButton = filterButtons[i];
+
+    if (filterButton.dataset.category === chosenCategory) {
+      filterButton.classList.add("selected");
+    } else {
+      filterButton.classList.remove("selected");
+    }
+  }
+
+  // Loop through every photo
+  for (var j = 0; j < photoButtons.length; j++) {
+    var photoButton = photoButtons[j];
+
+    // Each photo lists its categories, like "street city"
+    var photoCategories = photoButton.dataset.categories;
+
+    if (chosenCategory === "") {
+      // No category chosen, so show every photo in color
+      photoButton.classList.remove("dimmed");
+    } else if (photoCategories.includes(chosenCategory)) {
+      // This photo belongs to the chosen category, so keep the color
+      photoButton.classList.remove("dimmed");
+    } else {
+      // This photo is in a different category, so turn it black and white
+      photoButton.classList.add("dimmed");
+    }
+  }
+}
+
+// 4. When a filter button is clicked, choose that category
+for (var k = 0; k < filterButtons.length; k++) {
+  filterButtons[k].addEventListener("click", function (event) {
+    var clickedCategory = event.currentTarget.dataset.category;
+
+    if (clickedCategory === chosenCategory) {
+      chosenCategory = "";               // clicked the same one again, so clear it
+    } else {
+      chosenCategory = clickedCategory;  // choose the new category
+    }
+
+    updatePage();
+  });
+}
+  </script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
