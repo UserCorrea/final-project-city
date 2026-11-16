@@ -7,16 +7,17 @@ html {
 /*fonts*/
 
 
+ @import url("https://use.typekit.net/cnq6pyd.css");
 
 /*main header*/
 
 .site-header {
     
-   font-family: "Acier BAT Text Gris";
-font-weight: 400;
+font-family: "acier-bat-noir";
+font-weight: bold;
+font-size: 400;
 font-style: normal;
-  
-    color:white;
+color:white;
 }
 
 

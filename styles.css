@@ -11,6 +11,11 @@
   src: url("fonts/AcierBAT-TextGris.otf");
 }
 
+@font-face {
+  font-family:"Garamond" ;
+  src: url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+}
+
 /* ---------- BODY AND COLORS ---------- */
 body {
   /* Colors from the Figma file. Change them here and they change everywhere. */
@@ -124,12 +129,11 @@ body {
 }
 
 .welcome-title {
-  width: 405px;
-  margin: 0 0 96px 10px;
-  font-family: "Acier BAT Text Solid", sans-serif;
+  width: 500px;
+  margin: 0 0 50px 10px;
+  font-family: Garamond, serif;
   font-size: 40px;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight:bold;
 }
 
 .body-text {
