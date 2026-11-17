@@ -1,17 +1,57 @@
 html {
-background-color: rgba(3, 8, 42, 1) ;
-    --hover-background: rgba(245, 135, 31, 0.22);
-    --hover-text: #ffae00;
+  --white: #ffffff;
+  --light-blue:rgb(159, 183, 209);
+  --navy: #001b44;
+  --purple-dark: #1b1c62;
+  --purple-light: #2e2f81;
+  --page-background: #010532;
+  --hover-background: rgba(245, 135, 31, 0.22);
+  --hover-text: #ffae00;
 }
 
-.page-width-wrapper {
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+body{
+background-color: var(--page-background);
+color: var(--white);
+}
+
+.marcellus-regular {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.site-head {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 96px;
+  font-style: normal;
+  color:white;
+    margin: 100px auto 50px;
+    width: 1100px;
+
+
+}
+
+.nav-width-wrapper {
   width: 1190px;
   margin: 0 auto;
 }
 
-
-
 /*Navigator*/
+
+
 
 .nav-list {
   display: flex;
@@ -19,7 +59,8 @@ background-color: rgba(3, 8, 42, 1) ;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
-  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
+  list-style: none;
+  border-top: 3px solid rgb(159, 183, 209) ;
   border-bottom:  3px solid rgb(159, 183, 209);
 }
 
@@ -58,5 +99,10 @@ background-color: rgba(3, 8, 42, 1) ;
 }
 
 
-
-/*Image*/
+.border-footer {
+  padding: 15px;
+  border-top:3px solid var(--light-blue);
+  border-bottom: 3px solid var(--light-blue);
+  width: 1190px;
+  margin: 0 auto;
+}

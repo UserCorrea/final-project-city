@@ -47,7 +47,7 @@ body {
   padding-bottom: 86px;
   box-sizing: border-box;
   /* The first part is the brown tint from Figma, the second part is the photo */
-  background-image: linear-gradient(rgba(48, 23, 0, 0.24), rgba(48, 23, 0, 0.24)), url("images/hero.jpg");
+  background-image: linear-gradient(rgba(48, 23, 0, 0.25), rgba(48, 23, 0, 0.25)), url("Image/Img54.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -61,6 +61,10 @@ body {
 }
 
 /* ---------- NAVIGATION (top and footer share these classes) ---------- */
+.landscape-photo {
+margin: 0 auto;
+max-width: 1220;}
+
 .nav-list {
   display: flex;
   gap: 10px;
@@ -139,13 +143,8 @@ body {
   margin-left: 22px;
 }
 
-.landscape-photo {
-  width: 534px;
-  height: 401px;
-  margin-top: 32px;
-  margin-left: auto;
-  object-fit: cover;
-}
+
+
 
 /* ---------- GALLERY SECTION ---------- */
 .gallery-section {
