@@ -9,10 +9,14 @@ html {
   --hover-text: #ffae00;
 }
 
+.decortive-square-one {
+
+}
 .wrapper{
     width: 1100px;
     margin: 0 auto;
 }
+
 
 body{
 background-color: var(--page-background);
@@ -40,7 +44,7 @@ color: var(--white);
   color:white;
     margin: 100px auto 50px;
     width: 1100px;
-
+    text-align: right;
 
 }
 

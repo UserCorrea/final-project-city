@@ -21,16 +21,19 @@ body {
   /* Colors from the Figma file. Change them here and they change everywhere. */
   --white: #ffffff;
   --navy: #001b44;
+  --light-blue:rgb(159, 183, 209);
   --purple-dark: #1b1c62;
   --purple-light: #2e2f81;
   --page-background: #010532;
   --hover-background: rgba(245, 135, 31, 0.22);
   --hover-text: #ffae00;
 
-  margin: 0;
+  margin: 0 auto;
   background-color: var(--page-background);
   color: var(--white);
   font-family: "Jeju Gothic", sans-serif;
+  max-width: 1200px;
+
 }
 
 /* A box that keeps content 1190px wide and centered on the page */
@@ -43,11 +46,11 @@ body {
 .hero {
   display: flex;
   align-items: flex-end;
-  height: 600px;
+  height: 500px;
   padding-bottom: 86px;
   box-sizing: border-box;
   /* The first part is the brown tint from Figma, the second part is the photo */
-  background-image: linear-gradient(rgba(48, 23, 0, 0.25), rgba(48, 23, 0, 0.25)), url("Image/Img54.jpg");
+  background-image: linear-gradient(rgba(48, 23, 0, 0.25), rgba(48, 23, 0, 0.25)), url("Image/city_site20.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -60,21 +63,18 @@ body {
   color: var(--white);
 }
 
-/* ---------- NAVIGATION (top and footer share these classes) ---------- */
-.landscape-photo {
-margin: 0 auto;
-max-width: 1220;}
+/* ---------- NAVIGATION ---------- */
 
 .nav-list {
   display: flex;
   gap: 10px;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0;
-  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
-  border-bottom:  3px solid rgb(159, 183, 209);
+  padding: 5px;
+  list-style: none;
+  border-top: 3px solid var(--light-blue) ;
+  border-bottom:  3px solid var(--light-blue);
 }
-
 
 .nav-item {
   flex: 1; }
@@ -85,12 +85,10 @@ max-width: 1220;}
   justify-content: center;
   height: 94px;
   font-family: "Acier BAT Text Solid", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
   color:rgb(159, 183, 209);
- 
-
  
 }
 
@@ -119,9 +117,7 @@ max-width: 1220;}
   height: 471px;
 }
 
-.intro-text {
-  width: 443px;
-}
+
 
 .welcome-title {
   width: 500px;
@@ -136,11 +132,6 @@ max-width: 1220;}
   margin: 0;
   font-size: 24px;
   letter-spacing: 0.72px;
-}
-
-.intro-paragraph {
-  width: 421px;
-  margin-left: 22px;
 }
 
 
@@ -168,7 +159,7 @@ max-width: 1220;}
 }
 
 /* ---------- FOOTER ---------- */
-/* Same stripe trick as the intro section */
+
 .footer {
   height: 634px;
   margin-top: 270px;

@@ -16,11 +16,13 @@
 <body class="page">
 
   <!-- Decorative circles (the background shapes from Figma) -->
-  <div class="circle circle-top-left"></div>
-  <div class="circle circle-top-right"></div>
-  <div class="circle circle-middle"></div>
-  <div class="circle circle-bottom-left"></div>
-  <div class="circle circle-bottom-right"></div>
+  <div class="background">
+    <div class="circle circle-top-left"></div>
+    <div class="circle circle-top-right"></div>
+    <div class="circle circle-middle"></div>
+    <div class="circle circle-bottom-left"></div>
+    <div class="circle circle-bottom-right"></div>
+  </div>
 
   <header class="header">
     <h1 class="page-title">Collection</h1>
@@ -82,7 +84,7 @@
         </li>
         <li class="photo-item">
           <button class="photo-button landscape" data-categories="street alleyway" popovertarget="popup-5">
-            <img class="photo" src="images/im44-5-3.jpg" alt="Abandoned food truck on W Bruce St">
+            <img class="photo" src="Image/city_siteFoodTruck.jpg" alt="Abandoned food truck on W Bruce St">
           </button>
         </li>
         <li class="photo-item">
@@ -179,13 +181,7 @@
   </main>
 
   <footer class="footer">
-    <ul class="footer-list">
-      <li class="footer-item"><a class="footer-link" href="index.html">Home</a></li>
-      <li class="footer-item"><a class="footer-link" href="info.html">Info</a></li>
-      <li class="footer-item"><a class="footer-link" href="collection.html">Collection</a></li>
-      <li class="footer-item"><a class="footer-link" href="visit.html">Visit</a></li>
-      <li class="footer-item"><a class="footer-link" href="about.html">About</a></li>
-    </ul>
+    
   </footer>
 
 
@@ -226,7 +222,7 @@
   </aside>
 
   <aside class="popup landscape-popup" popover id="popup-5">
-    <img class="popup-photo" src="images/im44-5-3.jpg" alt="Abandoned food truck on W Bruce St">
+    <img class="popup-photo" src="Image/city_siteFoodTruck.jpg" alt="Abandoned food truck on W Bruce St">
     <p class="popup-title">Abandoned Food Truck</p>
     <address class="popup-address">423 W Bruce St, Milwaukee, WI 53204</address>
     <button class="close-button" popovertarget="popup-5" popovertargetaction="hide">Close</button>
@@ -346,66 +342,7 @@
   </aside>
 
   <script src="script.js">
-    // CATEGORY FILTER
-// Click a category (Zocalo, Lake, Street, City, Allyway) and every photo
-// that is NOT in that category turns black and white.
-// Click the same category again to bring all the colors back.
 
-// 1. Find all the filter buttons and all the photo buttons on the page
-var filterButtons = document.querySelectorAll(".filter-button");
-var photoButtons = document.querySelectorAll(".photo-button");
-
-// 2. Remember which category is chosen ("" means none)
-var chosenCategory = "";
-
-// 3. This function updates the page for the chosen category
-function updatePage() {
-
-  // Loop through every filter button
-  for (var i = 0; i < filterButtons.length; i++) {
-    var filterButton = filterButtons[i];
-
-    if (filterButton.dataset.category === chosenCategory) {
-      filterButton.classList.add("selected");
-    } else {
-      filterButton.classList.remove("selected");
-    }
-  }
-
-  // Loop through every photo
-  for (var j = 0; j < photoButtons.length; j++) {
-    var photoButton = photoButtons[j];
-
-    // Each photo lists its categories, like "street city"
-    var photoCategories = photoButton.dataset.categories;
-
-    if (chosenCategory === "") {
-      // No category chosen, so show every photo in color
-      photoButton.classList.remove("dimmed");
-    } else if (photoCategories.includes(chosenCategory)) {
-      // This photo belongs to the chosen category, so keep the color
-      photoButton.classList.remove("dimmed");
-    } else {
-      // This photo is in a different category, so turn it black and white
-      photoButton.classList.add("dimmed");
-    }
-  }
-}
-
-// 4. When a filter button is clicked, choose that category
-for (var k = 0; k < filterButtons.length; k++) {
-  filterButtons[k].addEventListener("click", function (event) {
-    var clickedCategory = event.currentTarget.dataset.category;
-
-    if (clickedCategory === chosenCategory) {
-      chosenCategory = "";               // clicked the same one again, so clear it
-    } else {
-      chosenCategory = clickedCategory;  // choose the new category
-    }
-
-    updatePage();
-  });
-}
   </script>
 </body>
 </html>

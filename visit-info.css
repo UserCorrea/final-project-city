@@ -1,94 +1,163 @@
-html {
-  --white: #ffffff;
-  --light-blue:rgb(159, 183, 209);
-  --navy: #001b44;
-  --purple-dark: #1b1c62;
-  --purple-light: #2e2f81;
-  --page-background: #010532;
-  --hover-background: rgba(245, 135, 31, 0.22);
-  --hover-text: #ffae00;
+/* ---------- Colors (estimated from the mockup image) ---------- */
+:root {
+  --navy: #03052b;
+  --indigo: #272a77;
+  --line: #2f3190;
+  --soft-text: #a5abdb;
+  --light-text: #ffffff;
+  --gold: #ffb400;
 }
 
-.wrapper{
-    width: 1100px;
-    margin: 0 auto;
-}
-
-body{
-background-color: var(--page-background);
-color: var(--white);
-}
-
-.marcellus-regular {
-  font-family: "Marcellus", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.eb-garamond {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-
-.site-head {
-  font-family: "Marcellus", serif;
-  font-weight: 400;
-  font-size: 96px;
-  font-style: normal;
-  color:white;
-    margin: 100px auto 50px;
-    width: 1100px;
-
-
-}
-
-.nav-width-wrapper {
-  width: 1190px;
+/* ---------- Page (designed at 1200px wide) ---------- */
+body {
+  max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--navy);
+  color: var(--light-text);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* ---------- Header ---------- */
+/* Export the diagonal stripes behind the header + dates as images/stripes-top.png (1200 x 870) */
+.page-header {
+  background-color: var(--indigo);
+  background-image: url(images/stripes-top.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.page-title {
+  margin: 0 0 80px 0;
+  padding: 120px 105px 0 0;
+  text-align: right;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 100px;
+}
+
+/* ---------- Navigation ---------- */
+.main-nav {
+  margin: 0 50px;
+  border-top: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
 }
 
 .nav-list {
   display: flex;
-  gap: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  list-style: none;border-top: 3px solid rgb(159, 183, 209) ;
-  border-bottom:  3px solid rgb(159, 183, 209);
+  justify-content: space-around;
+  margin: 0;
+  padding: 40px 0;
+  list-style: none;
 }
-
-
-.nav-item {
-  flex: 1; }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 94px;
-  font-family: "Acier BAT Text Solid", sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
+  color: var(--soft-text);
   text-decoration: none;
-  color:rgb(159, 183, 209);
- 
-
- 
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
 }
 
-/* Hover state from the Figma "Variant2" */
 .nav-link:hover {
-  background-color: var(--hover-background);
-  color: var(--hover-text);
+  color: var(--gold);
 }
 
-/* The navy bar under the hero */
-.top-nav {
-  
+/* ---------- Dates ---------- */
+.dates-section {
+  padding: 85px 135px 225px 0;
+  text-align: right;
+}
+
+.dates-intro {
+  margin: 0 0 65px 0;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+.dates {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+/* ---------- Location ---------- */
+/* Export the skyline photo (with the dark blue tint) as images/skyline.jpg (1200 x 446) */
+.location-section {
+  background-image: url(images/skyline.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 65px 0 141px 423px;
+}
+
+.section-heading {
+  margin: 0 0 55px 0;
+  color: var(--soft-text);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+.address {
+  color: var(--gold);
+  text-transform: uppercase;
+  font-style: normal;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 47px;
+}
+
+/* ---------- Map ---------- */
+/* Export the diagonal stripes behind the map as images/stripes-bottom.png (1200 x 1130) */
+.map-section {
+  background-color: var(--indigo);
+  background-image: url(images/stripes-bottom.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 224px 0 130px 134px;
+}
+
+.map-section .section-heading {
+  margin: 0 0 64px 12px;
+}
+
+.map-image {
+  display: block;
+  width: 917px;
+  height: 633px;
+}
+
+/* ---------- Footer ---------- */
+.page-footer {
+  background-color: var(--indigo);
+}
+
+.footer-list {
   display: flex;
-  align-items: center;
-  height: 163px;
-  
+  justify-content: space-around;
+  margin: 0 50px;
+  padding: 70px 0;
+  border-top: 2px solid var(--line);
+  list-style: none;
+}
+
+.footer-link {
+  color: var(--soft-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.footer-link:hover {
+  color: var(--gold);
 }

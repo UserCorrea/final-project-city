@@ -25,8 +25,18 @@
   background-color: #03082a;
   color: #ffffff;
   font-family: "JejuGothic", "Jeju Gothic", Arial, sans-serif;
-  position: relative;      /* lets the circles sit inside the page */
-  overflow: hidden;        /* hides the parts of circles that go off the edge */
+  position: relative;      /* lets the background sit inside the page */
+}
+
+/* A box that covers the whole page behind the content.
+   It cuts off the parts of circles that go past the page edge. */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .header,
@@ -91,12 +101,13 @@
 }
 
 .page-title {
-  margin: 0 0 76px 70px;
+  margin: 0 0 80px 0;
+  padding: 0 0 105px 120px  ;
+  text-align: left;
   font-family: "Marcellus", serif;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 90px;
   line-height: 100px;
-  color: #ffffff;
 }
 
 .nav {
