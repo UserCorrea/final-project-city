@@ -20,12 +20,28 @@
 
 /* ---------- PAGE ---------- */
 
-.page {
+html {  
+  --white: #ffffff;
+  --light-blue:rgb(159, 183, 209);
+  --navy: #001b44;
+  --purple-dark: #1b1c62;
+  --purple-light: #2e2f81;
+  --page-background: #010532;
+  --hover-background: rgba(245, 135, 31, 0.22);
+  --hover-text: #ffae00;}
+
+.page-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+  .page {
   margin: 0;
   background-color: #03082a;
   color: #ffffff;
   font-family: "JejuGothic", "Jeju Gothic", Arial, sans-serif;
-  position: relative;      /* lets the background sit inside the page */
+  position: relative;
+  align-items: center;    /* lets the background sit inside the page */
 }
 
 /* A box that covers the whole page behind the content.
@@ -58,7 +74,7 @@
   height: 1156px;
   left: -140px;
   top: -800px;
-  background-color: #001b44;
+  background-color: var(--navy);
 }
 
 .circle-top-right {
@@ -66,7 +82,7 @@
   height: 700px;
   left: 750px;
   top: 380px;
-  background-color: #1b1c62;
+  background-color: var(--purple-dark);
 }
 
 .circle-middle {
@@ -74,7 +90,7 @@
   height: 420px;
   left: 330px;
   top: 1070px;
-  background-color: #2e2f81;
+  background-color: var(--purple-light);
 }
 
 .circle-bottom-left {
@@ -96,6 +112,7 @@
 
 /* ---------- HEADER AND NAVIGATION ---------- */
 
+
 .header {
   padding-top: 126px;
 }
@@ -110,40 +127,54 @@
   line-height: 100px;
 }
 
-.nav {
-  width: 1100px;
+/*Navigator*/
+
+.nav-width {
+  width: 1150px;
   margin: 0 auto;
-  border-top: 4px solid #2e2f81;
-  border-bottom: 4px solid #2e2f81;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-between;
-  width: 1086px;
-  margin: 0 auto;
-  padding: 0;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
   list-style: none;
+  border-top: 3px solid var(--light-blue) ;
+  border-bottom:  3px solid var(--light-blue);
+}
+
+.nav-item {
+  flex: 1; 
 }
 
 .nav-link {
-  display: block;
-  height: 99px;
-  padding: 0 40px;
-  font-family: "Acier BAT", Arial, sans-serif;
-  font-size: 32px;
-  line-height: 99px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 30px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #9fb7d1;
+  color:var(--light-blue);
 }
+
+/* Hover state*/
 
 .nav-link:hover {
-  background-color: rgba(170, 71, 8, 0.4);
-  color: #ffae00;
+  background-color: var(--hover-background);
+  color: var(--hover-text);
 }
 
+/* The navy bar under the hero */
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 163px;
+  
+}
 
 /* ---------- FILTER BUTTONS ---------- */
 

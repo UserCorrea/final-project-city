@@ -6,7 +6,10 @@
   --soft-text: #a5abdb;
   --light-text: #ffffff;
   --gold: #ffb400;
-}
+
+  --hover-background: rgba(245, 135, 31, 0.22);
+  --hover-text: #ffae00;}
+
 
 /* ---------- Page (designed at 1200px wide) ---------- */
 body {
@@ -17,7 +20,13 @@ body {
   font-family: "Cormorant Garamond", serif;
 }
 
-/* ---------- Header ---------- */
+.page-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header*/
+
 /* Export the diagonal stripes behind the header + dates as images/stripes-top.png (1200 x 870) */
 .page-header {
   background-color: var(--indigo);
@@ -36,34 +45,53 @@ body {
   line-height: 100px;
 }
 
-/* ---------- Navigation ---------- */
-.main-nav {
-  margin: 0 50px;
-  border-top: 2px solid var(--line);
-  border-bottom: 2px solid var(--line);
+/* Navigator*/
+
+.nav-width {
+  width: 1150px;
+  margin: 0 auto;
 }
 
 .nav-list {
   display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 40px 0;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px;
   list-style: none;
+  border-top: 3px solid var(--soft-text) ;
+  border-bottom:  3px solid var(--soft-text);
+}
+
+.nav-item {
+  flex: 1; 
 }
 
 .nav-link {
-  color: var(--soft-text);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94px;
+  font-family: "Acier BAT Text Solid", sans-serif;
+  font-size: 30px;
   text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 30px;
+  text-decoration: none;
+  color:rgb(159, 183, 209);
 }
 
+/* Hover state*/
 .nav-link:hover {
-  color: var(--gold);
+  background-color: var(--hover-background);
+  color: var(--hover-text);
 }
+
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 163px; 
+}
+
 
 /* ---------- Dates ---------- */
 .dates-section {
@@ -89,12 +117,15 @@ body {
 
 /* ---------- Location ---------- */
 /* Export the skyline photo (with the dark blue tint) as images/skyline.jpg (1200 x 446) */
+
+
 .location-section {
-  background-image: url(images/skyline.jpg);
+  background-image: url(Image/city_site01.1.png);
   background-size: cover;
   background-position: center;
   padding: 65px 0 141px 423px;
 }
+
 
 .section-heading {
   margin: 0 0 55px 0;
@@ -102,7 +133,9 @@ body {
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
+
 }
+
 
 .address {
   color: var(--gold);
