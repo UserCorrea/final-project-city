@@ -13,11 +13,16 @@
 
 /* ---------- Page (designed at 1200px wide) ---------- */
 body {
-  max-width: 1200px;
+  
   margin: 0 auto;
   background-color: var(--navy);
   color: var(--light-text);
   font-family: "Cormorant Garamond", serif;
+}
+
+.wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .page-width {
@@ -27,12 +32,13 @@ body {
 
 /* Header*/
 
-/* Export the diagonal stripes behind the header + dates as images/stripes-top.png (1200 x 870) */
+/* Export the diagonal stripes behind the header + dates as images/stripes-top.png (1200 x 870) */image-strip
 .page-header {
-  background-color: var(--indigo);
-  background-image: url(images/stripes-top.png);
+  background-image: url(Image/Untitled-1.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  max-width: 1440px;
+  background-position: center;
 }
 
 .page-title {
@@ -150,15 +156,17 @@ body {
 /* ---------- Map ---------- */
 /* Export the diagonal stripes behind the map as images/stripes-bottom.png (1200 x 1130) */
 .map-section {
-  background-color: var(--indigo);
-  background-image: url(images/stripes-bottom.png);
+  background-image: url(Image/bottemstrip.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding: 224px 0 130px 134px;
+  background-position: center;
+  background-size: cover;
+  padding: 224px 0 130px 0px;
+  max-width: 1440px;
 }
 
 .map-section .section-heading {
   margin: 0 0 64px 12px;
+  background-position: center;
 }
 
 .map-image {
@@ -168,29 +176,10 @@ body {
 }
 
 /* ---------- Footer ---------- */
-.page-footer {
-  background-color: var(--indigo);
-}
 
-.footer-list {
-  display: flex;
-  justify-content: space-around;
-  margin: 0 50px;
-  padding: 70px 0;
-  border-top: 2px solid var(--line);
-  list-style: none;
-}
-
-.footer-link {
-  color: var(--soft-text);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 30px;
-}
-
-.footer-link:hover {
-  color: var(--gold);
+.border-footer {
+  padding: 15px;
+  border-top:3px solid var(--light-blue);
+  border-bottom: 3px solid var(--light-blue);
+  margin: 0 auto;
 }
